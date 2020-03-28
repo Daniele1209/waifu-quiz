@@ -1,28 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
+    
+    <waifu wf="You got ligma"/>
+    <img alt="Vue logo" src={{ZeroTwo.img}}>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import waifu from './components/Waifu.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    waifu
   }
 }
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
   margin-top: 60px;
 }
 </style>
+
+<style>
+body {
+  background-image: url("./assets/back.png");
+  background-repeat:no-repeat;
+}
+</style>
+
+ 
