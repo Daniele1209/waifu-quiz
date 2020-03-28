@@ -1,13 +1,34 @@
 <template>
   <div id="app">
     
-    
+    <img id="waif" src="./assets/zerotwo.jpg"/>
     <waifu wf="You got ligma"/>
-    <img alt="Vue logo" src={{ZeroTwo.img}}>
+    <img name="waifd" src="./assets/zerotwo.jpg"/>
+
   </div>
 </template>
 
 <script>
+
+var ZeroTwo={ 
+    name:"Zero Two",
+    img:"./assets/nois.png"
+}
+
+
+
+document.write(ZeroTwo.img);
+
+window.onload = function() {
+
+
+  
+  ZeroTwo.img="./assets/nois.png";
+  document.getElementsByName('waifd').src="./assets/nois.png";
+};
+
+
+
 
 import waifu from './components/Waifu.vue'
 
