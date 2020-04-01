@@ -6,7 +6,8 @@
       <b-row>
         <b-col sm = "6" offset = "3">
           <Questions
-            :current_question = questions[index]
+            :current_question = 'questions[index]'
+            :next = 'next'
           />
         </b-col>
       </b-row>
@@ -29,20 +30,25 @@ export default {
       questions: [
         {
           answer: "Zero two",
-          url : "./assets/zerotwo.png"
+          url : require("@/assets/zerotwo.png")
         },
         {
           answer: "Midnight",
-          url: "./assets/midnight.jpg"
+          url: require("@/assets/zerotwo.png")
         },
         {
           answer: "Rem",
-          url: "./assets/rem.jpg"
+          url: require("@/assets/zerotwo.png")
         }
       ],
       index: 0
     }
   },
+  methods: {
+    next() {
+      this.index++
+    }
+  }
 
 }
 </script>
