@@ -5,7 +5,9 @@
     <b-container class = "bv-example-row">
       <b-row>
         <b-col sm = "6" offset = "3">
-          <Questions />
+          <Questions
+            :current_question = questions[index]
+          />
         </b-col>
       </b-row>
     </b-container>
@@ -21,7 +23,27 @@ export default {
   components: {
     Header,
     Questions
-  }
+  },
+  data() {
+    return {
+      questions: [
+        {
+          answer: "Zero two",
+          url : "./assets/zerotwo.png"
+        },
+        {
+          answer: "Midnight",
+          url: "./assets/midnight.jpg"
+        },
+        {
+          answer: "Rem",
+          url: "./assets/rem.jpg"
+        }
+      ],
+      index: 0
+    }
+  },
+
 }
 </script>
 

@@ -1,9 +1,8 @@
 <template>
     <div class = "question_box">
         <b-jumbotron>
-            <template v-slot:lead >
-                <h1>Can you guess the waifu ?? :3</h1>
-            </template>
+            <img : src = "require(current_question.url)" >
+
 
             <hr class = "my-4" />
             <p>
@@ -15,3 +14,12 @@
         </b-jumbotron>
     </div>
 </template>
+
+
+<script>
+    export default {
+        props: {
+            current_question: Object
+        }
+    }
+</script>
