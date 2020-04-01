@@ -21,7 +21,7 @@
 export default {
     name: 'WaifuName',
   props: {
-    wf: String,
+    wf: String
   }
 
 }

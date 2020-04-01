@@ -1,43 +1,60 @@
 <template>
   <div id="app">
+    <Header />
+    <b-container class="bv-example-row">
+      <b-row>
+        <b-col sm="10" offset="1"><Question :current_question= Waifus[index] /></b-col>
+      </b-row>
+    </b-container>
     
-    <img id="waif" src="./assets/zerotwo.jpg"/>
-    <waifu wf="You got ligma"/>
-    <img name="waifd" src="./assets/zerotwo.jpg"/>
+    
+    
 
   </div>
 </template>
 
+
+
 <script>
-
-var ZeroTwo={ 
-    name:"Zero Two",
-    img:"./assets/nois.png"
-}
-
-
-
-document.write(ZeroTwo.img);
-
-window.onload = function() {
-
-
-  
-  ZeroTwo.img="./assets/nois.png";
-  document.getElementsByName('waifd').src="./assets/nois.png";
-};
-
-
-
-
-import waifu from './components/Waifu.vue'
+import Header from "./components/Header.vue"
+import Question from "./components/Question.vue"
 
 export default {
   name: 'App',
   components: {
-    waifu
-  }
+  Header,
+  Question
+  },
+  data(){
+    return{
+      Waifus:[
+            {
+            name: "Rem",
+            img: require("@/assets/rem.jpg")
+            },
+
+            {
+            name:"Zero Two",
+            img:require("@/assets/zerotwo.jpg")
+            },
+
+            {
+            name:"Midnight",
+            img:require("@/assets/midnight.jpg")
+            },
+            
+        ],
+        index:0
+    }
+    }
 }
+
+
+
+
+
+
+
 </script>
 
 <style>
@@ -47,15 +64,23 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #ffffff;
+  color: #067522;
   margin-top: 60px;
 }
+
+#bv-example-row{
+background-color: transparent;
+
+
+}
+
 </style>
 
 <style>
 body {
   background-image: url("./assets/back.png");
   background-repeat:no-repeat;
+  
 }
 </style>
 
