@@ -34,11 +34,11 @@ export default {
         },
         {
           answer: "Midnight",
-          url: require("@/assets/zerotwo.png")
+          url: require("@/assets/midnight.jpg")
         },
         {
           answer: "Rem",
-          url: require("@/assets/zerotwo.png")
+          url: require("@/assets/rem.jpg")
         }
       ],
       index: 0

@@ -2,7 +2,11 @@
     <div class = "question_box">
         <b-jumbotron>
             <template v-slot:lead>
-                <img v-bind:src = "current_question.url" alt = "pic"/>
+                <img v-bind:src = "current_question.url"
+                     alt = ""
+                     height = "300px"
+                     weight = "300px" />
+
             </template>
             <hr class = "my-4" />
             <p>
