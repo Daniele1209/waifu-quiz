@@ -4,7 +4,7 @@
     <span style="display:inline-block; width:100px;"></span>
     <b-container class = "bv-example-row">
       <b-row>
-        <b-col sm = "6" offset = "3">
+        <b-col sm = "8" offset = "2">
           <Questions
             :current_question = 'questions[index]'
             :next = 'next'

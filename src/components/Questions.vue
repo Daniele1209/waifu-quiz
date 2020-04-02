@@ -5,12 +5,17 @@
                 <b-img v-bind:src = "current_question.url" alt="" thumbnail id = "image"></b-img>
             </template>
             <p id = "enter">
-                <b>Guess the waifu :</b>
+                <b id = "text">Guess the waifu :</b>
             </p>
             <p>
-                <input v-model = "input" @keyup.enter = "check_name"/>
+                <b-form-input
+                        v-model = "input"
+                        @keyup.enter = "check_name"
+                        :state = "this.ok"
+                >
+                </b-form-input>
             </p>
-            <b-button v-model = "input" variant="success" @click = "check_name" >Next</b-button>
+            <b-button size = "lg" v-model = "input" variant="info" @click = "check_name">Next</b-button>
         </b-jumbotron>
     </div>
 </template>
@@ -24,12 +29,21 @@
             input: String,
             answer: String
         },
+        data() {
+            return {
+                ok: null
+            }
+        },
         methods: {
             check_name() {
-                if (this.input === this.answer)
+                if (this.input === this.answer) {
+                    this.ok = null;
                     this.next();
-                 else
+                }
+                else {
+                    this.ok = false;
                     return false;
+                }
             }
         }
     }
@@ -38,8 +52,11 @@
 
 <style>
     #image {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
+    }
+    #text {
+        -webkit-text-stroke: 1.7px black;
     }
     #enter {
         display: inline;
