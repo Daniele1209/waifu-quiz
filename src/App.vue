@@ -30,10 +30,6 @@ export default {
 
 
 
-
-
-
-
 </script>
 
 <style>
@@ -45,23 +41,19 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #067522;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 #bv-example-row{
 background-color: transparent;
-
-
 }
-
 </style>
 
 <style>
 body {
   background-image: url("./assets/back.png");
   background-repeat:no-repeat;
+  background-size: cover;
   
 }
 </style>
-
- 

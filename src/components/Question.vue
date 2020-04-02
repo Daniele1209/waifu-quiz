@@ -1,29 +1,25 @@
 <template>
 
 <div class="question-box " >
-  <b-jumbotron header="Which waifu is this?" class="opacity-2">
+  <b-jumbotron style="background-color: rgba(245, 245, 245, 0.3);" header="Which waifu is this?" class="opacity-2">
     <template v-slot:lead>
-      
-
-
-      <!--  <div v-for="waifu in Waifus" v-bind:key="waifu"> 
-        <img alt="Wf" v-bind:src=waifu.img />
-        </div> -->
-
-        <img v-bind:src="Waifus[index].img" alt="lmao" height="400px" width="400px" />
-
+    <h1 v-if="index>17 && index<20" > BONUS </h1>
+    <img v-if="index<20" v-bind:src="Waifus[index].img" alt="lmao" height="400px" width="400px" />
+    <h1 v-else > CONGRATULATIONS, YOU ARE A WEEB </h1>
     </template>
 
-    <hr class="my-4">
 
-    <input  />
+    <div v-if="index<20">
+    <hr class="my-4">
+    <input v-model="input" v-on:keyup.enter="checkWaifu" />
     <br/>
     <br/>
-    <b-button variant="primary" v-on:click="nextWaifu" >Next</b-button>
+    <b-button variant="primary" v-on:click="checkWaifu">Next</b-button>
     <br>
   <h4>
     {{index+1}}
   </h4>
+  </div>
   </b-jumbotron>
 </div>
 </template>
@@ -122,12 +118,29 @@ export default {
             },
             
         ],
-        index:0
+        index:19,
+        input:""
     }    
   },
   methods:{ 
      nextWaifu(){
          this.index++;
+         this.input="";
+     },
+     checkWaifu(){
+       if(this.input===this.Waifus[this.index].name){
+         this.nextWaifu();
+       }
+       else{
+        return false;
+       }
+     },
+     bonus(){
+       if(this.index>18)
+       return true;
+       else
+       return false;
+
      }
   }    
 }
