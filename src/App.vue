@@ -1,50 +1,29 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :current_question = index />
     <b-container class="bv-example-row">
       <b-row>
-        <b-col sm="10" offset="1"><Question :current_question= Waifus[index] /></b-col>
+        <b-col sm="10" offset="1"><Question /></b-col>
       </b-row>
     </b-container>
-    
-    
-    
-
   </div>
 </template>
 
 
 
 <script>
-import Header from "./components/Header.vue"
 import Question from "./components/Question.vue"
+import Header from "./components/Header.vue"
 
 export default {
   name: 'App',
   components: {
-  Header,
-  Question
+  Question,
+  Header
   },
   data(){
     return{
-      Waifus:[
-            {
-            name: "Rem",
-            img: require("@/assets/rem.jpg")
-            },
-
-            {
-            name:"Zero Two",
-            img:require("@/assets/zerotwo.jpg")
-            },
-
-            {
-            name:"Midnight",
-            img:require("@/assets/midnight.jpg")
-            },
-            
-        ],
-        index:0
+      
     }
     }
 }
