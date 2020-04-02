@@ -3,7 +3,7 @@
     <Header :current_question = index />
     <b-container class="bv-example-row">
       <b-row>
-        <b-col sm="10" offset="1"><Question /></b-col>
+        <b-col sm="10" offset="1" > <Question /></b-col>
       </b-row>
     </b-container>
   </div>
@@ -39,6 +39,7 @@ export default {
 <style>
 
 #app {
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

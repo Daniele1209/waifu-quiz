@@ -1,8 +1,7 @@
 <template>
 
-<div class="question-box">
-  
-  <b-jumbotron header="Which waifu is this?">
+<div class="question-box " >
+  <b-jumbotron header="Which waifu is this?" class="opacity-2">
     <template v-slot:lead>
       
 
@@ -21,17 +20,18 @@
     <br/>
     <br/>
     <b-button variant="primary" v-on:click="nextWaifu" >Next</b-button>
-
+    <br>
+  <h4>
+    {{index+1}}
+  </h4>
   </b-jumbotron>
 </div>
 </template>
 <script>
 
-
        
 export default {
     props:{
-        currentquestion: Object
     },
   data(){
     return{
@@ -141,10 +141,8 @@ export default {
 
 <style>
 
-
-
 #question-box{
-color:#08a823c7;
+color: #08a823c7;
 background-color:transparent;
 opacity: 0.2;
 }
