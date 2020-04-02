@@ -36,11 +36,11 @@ export default {
 
 #app {
   
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Lora, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #067522;
+  color: #974d4a;
   margin-top: 30px;
 }
 
