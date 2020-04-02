@@ -2,15 +2,10 @@
     <div class = "question_box" >
         <b-jumbotron style="background-color: rgba(245, 245, 245, 0.2); ">
             <template v-slot:lead>
-                <b-img v-bind:src = "current_question.url" alt=""
-                     height = "300px"
-                     weight = "300px"
-                ></b-img>
-
+                <b-img v-bind:src = "current_question.url" alt="" thumbnail id = "image"></b-img>
             </template>
-            <hr class = "my-6" />
-            <p>
-                <b>Enter name here :</b>
+            <p id = "enter">
+                <b>Guess the waifu :</b>
             </p>
             <p>
                 <input v-model = "input" @keyup.enter = "check_name"/>
@@ -42,8 +37,16 @@
 </script>
 
 <style>
-    #question_box {
-        background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+    #image {
+        width: 400px;
+        height: 400px;
     }
-
+    #enter {
+        display: inline;
+        position: relative;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size:40px;
+        letter-spacing: -2.3px;
+        color: rgba(174, 183, 255, 0.7);
+    }
 </style>

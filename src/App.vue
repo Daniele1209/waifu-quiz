@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-
+    <span style="display:inline-block; width:100px;"></span>
     <b-container class = "bv-example-row">
       <b-row>
         <b-col sm = "6" offset = "3">

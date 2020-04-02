@@ -1,8 +1,17 @@
 <template>
-    <div>
-        <b-nav tabs>
-            <b-nav-item disabled><b>Waifu quiz app</b></b-nav-item>
-            <b-nav-item disabled>Counter: 0/10</b-nav-item>
-        </b-nav>
-    </div>
+    <nav id = "bar">
+        <div>
+            <img src = "../assets/textfx.png" alt = "logo" id = "logo"/>
+        </div>
+    </nav>
 </template>
+
+<style>
+    #bar {
+        height: 5%;
+    }
+    #logo {
+        width: 17%;
+        height: 25%;
+    }
+</style>
